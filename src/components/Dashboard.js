@@ -1,26 +1,41 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, ListView, FlatList } from 'react-native';
 import { connect } from 'react-redux';
-import { emailChanged, passwordChanged, loginUser } from '../actions';
+import { itemsFetchData } from '../actions';
 import { Card, CardSection, Input, Button, Spinner } from './common';
-
+import ListItem from './ListItem';
 
 class Dashboard extends Component {
+
+  componentDidMount() {
+    this.props.fetchData('https://jsonplaceholder.typicode.com/posts');
+  }
+
   render() {
     return(
-      <Text>
-      hey !
-      </Text>
+            
+      <FlatList
+        data={ this.props.items }
+        renderItem={
+          ({item}) => <Text>{item.title}</Text>
+        }
+      />
+            
     )
+
   }
+
 }
 
-const mapStateToProps = ({ auth }) => {
-  const { email, password, error, loading } = auth;
 
-  return { email, password, error, loading };
+const mapStateToProps = (state) => {
+  return { items : state.dashboard};
 };
 
-export default connect(mapStateToProps, {
-  emailChanged, passwordChanged, loginUser
-})(Dashboard);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: (url) => dispatch(itemsFetchData(url))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
