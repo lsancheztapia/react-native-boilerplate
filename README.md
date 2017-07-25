@@ -3,7 +3,7 @@ The React Native, Redux basic boilerplate
 
 ## Installation:
 ```bash
-react-native init <MyProject>
+react-native init <MyProject> --version 0.34.1
 cd <MyProject>
 git clone https://github.com/lsancheztapia/react-native-boilerplate.git
 cd react-native-boilerplate
