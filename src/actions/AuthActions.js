@@ -1,7 +1,3 @@
-/**
- * Example of action creators 
- */
-//import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 import {
   EMAIL_CHANGED,
@@ -10,6 +6,9 @@ import {
   LOGIN_USER_FAIL,
   LOGIN_USER
 } from './types';
+
+import { Keyboard } from 'react-native'
+import dismissKeyboard from 'react-native-dismiss-keyboard'
 
 export const emailChanged = (text) => {
   return {
@@ -26,22 +25,18 @@ export const passwordChanged = (text) => {
 };
 
 export const loginUser = ({ email, password }) => {
+
+console.log( 'loginUser()' )
+
   return (dispatch) => {
     dispatch({ type: LOGIN_USER });
 
-    loginUserSuccess(dispatch, { email, password } );
+    if ( email == 'u' && password == 'p' ) {
+      loginUserSuccess( dispatch, {u:'luis', uid: '1'} )
+    } else {
+      loginUserFail( dispatch )
+    }
 
-/*
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(user => loginUserSuccess(dispatch, user))
-      .catch((error) => {
-        console.log(error);
-
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-          .then(user => loginUserSuccess(dispatch, user))
-          .catch(() => loginUserFail(dispatch));
-      });
-*/
   };
 };
 
@@ -55,5 +50,10 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  Actions.main();
+dismissKeyboard()
+/*
+  Keyboard.dismiss
+console.log( Keyboard, '======================>' )
+*/
+  Actions.main()
 };

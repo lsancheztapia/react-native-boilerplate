@@ -1,14 +1,12 @@
 import {
-  ITEMS_FETCH_DATA_SUCCESS
+  EMPLOYEES_FETCH_SUCCESS
 } from '../actions/types';
 
-const INITIAL_STATE = {
-  items: []
-};
+const INITIAL_STATE = {};
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case ITEMS_FETCH_DATA_SUCCESS:
+    case EMPLOYEES_FETCH_SUCCESS:
       return action.payload;
     default:
       return state;
