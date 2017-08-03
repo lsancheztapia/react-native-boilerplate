@@ -14,6 +14,7 @@ npm install react-native-router-flux@3.35.0 --save
 npm install redux@3.6.0  --save
 npm install react-redux@4.4.5 --save
 npm install redux-thunk@2.1.0 --save
+npm install react-native-dismiss-keyboard@1.0.0 --save
 ```
 
 finally edit index.android.js and index.ios.js and put this code:
