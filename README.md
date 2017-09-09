@@ -35,6 +35,7 @@ react-native run-android
 ```
 ### versions tested:
 ```bash
+react-native  0.48.2
 react-native-router-flux  4.0.0-beta.21
 redux  3.7.2
 react-redux  5.0.6
