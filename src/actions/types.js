@@ -1,10 +1,7 @@
-export const EMAIL_CHANGED = 'email_changed';
-export const PASSWORD_CHANGED = 'password_changed';
-export const LOGIN_USER_SUCCESS = 'login_user_success';
-export const LOGIN_USER_FAIL = 'login_user_fail';
-export const LOGIN_USER = 'login_user';
 
-export const EMPLOYEE_UPDATE = 'employee_update';
-export const EMPLOYEE_CREATE = 'employee_create';
-export const EMPLOYEES_FETCH_SUCCESS = 'employees_fetch_success';
-export const EMPLOYEE_SAVE_SUCCESS = 'employee_save_success';
+// the text on the right is not used
+export const FIELD_VALUE_CHANGED = 'field_value_changed'
+
+export const LOGIN_WRONG_USER_PASSWORD = 'login_wrong_user_password'
+
+export const TEST_ITEMS_LOADED = 'tets_items_loaded'

@@ -1,21 +1,21 @@
-all of this will be moved to a new branch, for having new clean code that works with last versions
+
 # react-native-boilerplate
 The React Native, Redux basic boilerplate 
 
 ## Installation:
 ```bash
-react-native init <MyProject> --version 0.34.1
+react-native init <MyProject>
 cd <MyProject>
 git clone https://github.com/lsancheztapia/react-native-boilerplate.git
 cd react-native-boilerplate
 rm -rf .git
 mv * ../
 cd ../
-npm install react-native-router-flux@3.35.0 --save
-npm install redux@3.6.0  --save
-npm install react-redux@4.4.5 --save
-npm install redux-thunk@2.1.0 --save
-npm install react-native-dismiss-keyboard@1.0.0 --save
+npm install react-native-router-flux --save
+npm install redux  --save
+npm install react-redux --save
+npm install redux-thunk --save
+npm install react-native-dismiss-keyboard --save
 ```
 
 finally edit index.android.js and index.ios.js and put this code:
@@ -33,5 +33,12 @@ AppRegistry.registerComponent('<MyProject>', () => App);
 react-native start
 react-native run-android
 ```
-
+### versions tested:
+```bash
+react-native-router-flux  4.0.0-beta.21
+redux  3.7.2
+react-redux  5.0.6
+redux-thunk  2.2.0
+react-native-dismiss-keyboard 1.0.0
+```
 

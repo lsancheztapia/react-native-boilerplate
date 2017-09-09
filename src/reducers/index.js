@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux';
-import AuthReducer from './AuthReducer';
-import EmployeeFormReducer from './EmployeeFormReducer';
-import EmployeeReducer from './EmployeeReducer';
+import { combineReducers } from 'redux'
+
+import LoginFormReducer from './LoginFormReducer'
+import TestListingReducer from './TestListingReducer'
 
 export default combineReducers({
-  auth: AuthReducer,
-  employeeForm: EmployeeFormReducer,
-  employees: EmployeeReducer
+  loginForm: LoginFormReducer,
+  testItems: TestListingReducer
 });
