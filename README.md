@@ -1,3 +1,4 @@
+all of this will be moved to a new branch, for having new clean code that works with last versions
 # react-native-boilerplate
 The React Native, Redux basic boilerplate 
 
