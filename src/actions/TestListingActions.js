@@ -9,7 +9,7 @@ export const fetchItems = () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
     .then( (items) =>{
-//console.log( items )
+console.log( items )
       dispatch({ type: TEST_ITEMS_LOADED, payload: items })
 
     }).catch( error => {

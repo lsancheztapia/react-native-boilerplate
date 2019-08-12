@@ -35,11 +35,11 @@ react-native run-android
 ```
 ### versions tested:
 ```bash
-react-native  0.48.2
-react-native-router-flux  4.0.0-beta.21
-redux  3.7.2
-react-redux  5.0.6
-redux-thunk  2.2.0
-react-native-dismiss-keyboard 1.0.0
+react-native  0.60.4
+react-native-router-flux  ^4.0.6
+redux  ^4.0.4
+react-redux  ^7.1.0
+redux-thunk  ^2.3.0
+react-native-dismiss-keyboard ^1.0.0
 ```
 
