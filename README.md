@@ -27,7 +27,7 @@ import App from './src/App';
 AppRegistry.registerComponent('<MyProject>', () => App);
 ```
 
-## Running - an emulator needs to be runnign first
+## Running - an emulator needs to be running first
 ```bash
 react-native start
 react-native run-android
