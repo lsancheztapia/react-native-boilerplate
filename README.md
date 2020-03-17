@@ -11,7 +11,7 @@ cd react-native-boilerplate
 rm -rf .git
 mv * ../
 cd ../
-npm install react-native-router-flux --save
+npm install react-native-router-flux@4.0.6 --save
 npm install redux  --save
 npm install react-redux --save
 npm install redux-thunk --save
